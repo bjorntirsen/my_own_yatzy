@@ -37,25 +37,10 @@ class Player {
 
 class Communication {
     constructor() {
-        this.step = 0;
+        
     }
     commsLogic() {
-        let comm1 = document.getElementById("comm1");
-        if (this.step === 0) {
-            this.stepOne();
-        }
-        else if (this.step === 1) {
-                        
-        }
-        else if (this.step === 3) {
-    
-        }
-        else if (this.step === 4) {
-    
-        }
-        else {
-            document.getElementById("comm-btn").disabled = true;
-        }
+        this.stepOne();        
     }
     stepOne() {
         let comDiv = document.getElementById("communication-div");
@@ -69,28 +54,29 @@ class Communication {
         span1.setAttribute("class", "spanner");
         span1.setAttribute("id", "span1");
         span1.innerHTML = "One player";
-        comm1.after(span1);        
+        comm1.after(span1);
+        span1.addEventListener("click", function(e) {
+            this.steptwo();
+        })      
         let span2 = document.createElement("span");
         span2.setAttribute("class", "spanner");
         span2.setAttribute("id", "span2");
         span2.innerHTML = "Two players";
         comm1.after(span2);
-        /* let input_field = document.createElement("input");
-        input_field.setAttribute("id", "input_field"); */
-        /* comm1.after(input_field);
-        document.getElementById("input_field").focus(); */
-        this.step++;
+        span2.addEventListener("click", function(e) {
+            console.log("step3");
+            stepthree();
+        })        
     }
     steptwo() {
-        /* let tmp = document.getElementById("input_field").value; */
-        console.log(current_game);
-        if (tmp == 1) {
-            this.step++;
-        }            
-        else if (tmp == 2) {
-            this.step+2;
-        }
-        this.step++;
+        console.log("step2");
+        let comDiv = document.getElementById("communication-div");
+        comDiv.innerHTML = "";
+    }
+    stepthree() {
+        
+        let comDiv = document.getElementById("communication-div");
+        comDiv.innerHTML = "";
     }
 }
 

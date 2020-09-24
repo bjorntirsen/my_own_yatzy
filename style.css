@@ -1,3 +1,4 @@
+/* All sections */
 body {
     display: flex;
     flex-wrap: wrap;
@@ -8,7 +9,7 @@ section {
     flex: 1 1 550px;
     margin: 15px;
 }
-
+/* Table Section */
 .logo-container {
     display: block;
     margin-left: auto;
@@ -77,8 +78,8 @@ input {
     margin: 15px;
     padding: 10px;
 }
-
-#dice-section {
+/* Dice Section */
+.dice-section {
     flex: 0 1 550px;
     border: 1px solid rgb(10, 9, 9);
     border-width: 2px;

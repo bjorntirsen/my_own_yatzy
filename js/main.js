@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     let list = document.getElementById("ul_list");
     let btnSend = document.getElementById("btnSend");
 
-    btnSend.addEventListener("click", function(e) {
+   /*  btnSend.addEventListener("click", function(e) {
         let divRow = document.createElement("divChat");
         list.appendChild(divRow);
 
@@ -96,5 +96,5 @@ document.addEventListener("DOMContentLoaded", function(event) {
         if (event.target.tagName == "SPANCHAT") {
             event.target.parentNode.remove();
         }
-    })
+    }) */
 });
