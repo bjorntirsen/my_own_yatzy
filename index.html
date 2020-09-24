@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="yatzy-main">
+        <div class="logo-container">
+            <img id="logo-img" src="images/yatzy_html5logo.png" alt="yatzy logo">
+        </div>
+        <div>
+            <table class="yatzy-table">
+                <tbody>
+                    <tr class="highlight">
+                        <td>Spelare/Player</td>
+                        <td><input id="player1" type="text"></td>
+                        <td><input id="player2" type="text"></td>
+                        <td><input id="player3" type="text"></td>
+                        <td><input id="player4" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Ettor/Ones</td>
+                        <td><input class="p1" id="p11" type="number" min=0 max=5></td>
+                        <td><input id="p21" type="number" min=0 max=5></td>
+                        <td><input id="p31" type="number" min=0 max=5></td>
+                        <td><input id="p41" type="number" min=0 max=5></td>
+                    </tr>
+                    <tr>
+                        <td>Tvåor/Twos</td>
+                        <td><input class="p1" id="p12" type="number" min=0 max=10 step=2></td>
+                        <td><input id="p22" type="number" min=0 max=10 step=2></td>
+                        <td><input id="p32" type="number" min=0 max=10 step=2></td>
+                        <td><input id="p42" type="number" min=0 max=10 step=2></td>
+                    </tr>
+                    <tr>
+                        <td>Treor/Threes</td>
+                        <td><input class="p1" id="p13" type="number" min=0 max=15 step=3></td>
+                        <td><input id="p23" type="number" min=0 max=15 step=3></td>
+                        <td><input id="p33" type="number" min=0 max=15 step=3></td>
+                        <td><input id="p43" type="number" min=0 max=15 step=3></td>
+                    </tr>
+                    <tr>
+                        <td>Fyror/Fours</td>
+                        <td><input class="p1" id="p14" type="number" min=0 max=20 step=4></td>
+                        <td><input id="p24" type="number" min=0 max=20 step=4></td>
+                        <td><input id="p34" type="number" min=0 max=20 step=4></td>
+                        <td><input id="p44" type="number" min=0 max=20 step=4></td>
+                    </tr>
+                    <tr>
+                        <td>Femmor/Fives</td>
+                        <td><input class="p1" id="p15" type="number" min=0 max=25 step=5></td>
+                        <td><input id="p25" type="number" min=0 max=25 step=5></td>
+                        <td><input id="p35" type="number" min=0 max=25 step=5></td>
+                        <td><input id="p45" type="number" min=0 max=25 step=5></td>
+                    </tr>
+                    <tr>
+                        <td>Sexor/Sixes</td>
+                        <td><input class="p1" id="p16" type="number" min=0 max=30 step=6></td>
+                        <td><input id="p26" type="number" min=0 max=30 step=6></td>
+                        <td><input id="p36" type="number" min=0 max=30 step=6></td>
+                        <td><input id="p46" type="number" min=0 max=30 step=6></td>
+                    </tr>
+                    <tr class="highlight">
+                        <td>Summa/Sum</td>
+                        <td><span id="p1sum"></span></td>
+                        <td><span id="p2sum"></span></td>
+                        <td><input id="p3sum" type="number" min=0 max=105></td>
+                        <td><input id="p4sum" type="number" min=0 max=105></td>
+                    </tr>
+                    <tr class="highlight">
+                        <td>Bonus</td>
+                        <td><span id="player1bonus"></span></td>
+                        <td><span id="player2bonus"></span></td>
+                        <td><input id="player3bonus" type="number" min=0 max=50 step=50></td>
+                        <td><input id="player4bonus" type="number" min=0 max=50 step=50></td>
+                    </tr>
+                    <tr>
+                        <td>Par/Pair</td>
+                        <td id="td-p1p"><span class="hide" id="player1pairs" type="number"></span></td>
+                        <td><input id="player2pairs" type="number" min=0 max=12 step=2></td>
+                        <td><input id="player3pairs" type="number" min=0 max=12 step=2></td>
+                        <td><input id="player4pairs" type="number" min=0 max=12 step=2></td>
+                    </tr>
+                    <tr>
+                        <td>Två par/Two pairs</td>
+                        <td id="td-p12p"><span class="hide" id="player12pairs" type="number"></span></td>
+                        <td><input id="player22pairs" type="number" min=0 max=22 step=2></td>
+                        <td><input id="player32pairs" type="number" min=0 max=22 step=2></td>
+                        <td><input id="player42pairs" type="number" min=0 max=22 step=2></td>
+                    </tr>
+                    <tr>
+                        <td>Tretal/Three of a kind</td>
+                        <td id="td-p1t"><span class="hide" id="player1toak" type="number"></span></td>
+                        <td><input id="player2toak" type="number" min=0 max=18></td>
+                        <td><input id="player3toak" type="number" min=0 max=18></td>
+                        <td><input id="player4toak" type="number" min=0 max=18></td>
+                    </tr>
+                    <tr>
+                        <td>Fyrtal/Four of a kind</td>
+                        <td id="td-p1f"><span class="hide" id="player1foak" type="number"></span></td>
+                        <td><input id="player2foak" type="number" min=0 max=24></td>
+                        <td><input id="player3foak" type="number" min=0 max=24></td>
+                        <td><input id="player4foak" type="number" min=0 max=24></td>
+                    </tr>
+                    <tr>
+                        <td>Liten stege/Small straight</td>
+                        <td id="td-p1ss"><span class="hide" id="player1ss" type="number"></span></td>
+                        <td><input id="player2sstraight" type="number" min=0 max=15></td>
+                        <td><input id="player3sstraight" type="number" min=0 max=15></td>
+                        <td><input id="player4sstraight" type="number" min=0 max=15></td>
+                    </tr>
+                    <tr>
+                        <td>Stor stege/Large straight</td>
+                        <td id="td-p1ls"><span class="hide" id="player1ls" type="number"></span></td>
+                        <td><input id="player2lstraight" type="number" min=0 max=20></td>
+                        <td><input id="player3lstraight" type="number" min=0 max=20></td>
+                        <td><input id="player4lstraight" type="number" min=0 max=20></td>
+                    </tr>
+                    <tr>
+                        <td>Kåk/Full house</td>
+                        <td id="td-p1fh"><span class="hide" id="p1fh"></span></td>
+                        <td><span id="p2fh"></span></td>
+                        <td><input id="p3fh" type="number" min=0 max=28></td>
+                        <td><input id="p4fh" type="number" min=0 max=28></td>
+                    </tr>
+                    <tr>
+                        <td>Chans/Chance</td>
+                        <td id="td-p1ch"><span class="hide" id="player1ch"></span></td>
+                        <td><input id="player2chance" type="number" min=0 max=30></td>
+                        <td><input id="player3chance" type="number" min=0 max=30></td>
+                        <td><input id="player4chance" type="number" min=0 max=30></td>
+                    </tr>
+                    <tr>
+                        <td>Yatzy</td>
+                        <td id="td-p1y"><span class="hide" id="player1y"></span></td>
+                        <td><input id="player2yatzy" type="number" min=0 max=50></td>
+                        <td><input id="player3yatzy" type="number" min=0 max=50></td>
+                        <td><input id="player4yatzy" type="number" min=0 max=50></td>
+                    </tr>
+                    <tr class="highlight">
+                        <td>Totalt/Total</td>
+                        <td><input id="player1total" type="number" min=0 max=374></td>
+                        <td><input id="player2total" type="number" min=0 max=374></td>
+                        <td><input id="player3total" type="number" min=0 max=374></td>
+                        <td><input id="player4total" type="number" min=0 max=374></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="communication-section">
+        <div id="communication-div">
+            <p id="comm1">
+                Hi and welcome to the Yatzy game! Do you want to start a new game?
+            </p>
+            <button id="comm-btn">OK</button>
+        </div>
+    </section>
+
+    <section id="dice-section">
+        <div id="dice-box">
+            <div class="dice-container">
+                <img class="dice" id="dice1" src="images/q.PNG" alt="Dice1">
+                <input class="checkbox" type="checkbox" value="1">
+            </div>
+            <div class="dice-container">
+                <img class="dice" id="dice2" src="images/q.PNG" alt="Dice2">
+                <input class="checkbox" type="checkbox" value="2">
+            </div>
+            <div class="dice-container">
+                <img class="dice" id="dice3" src="images/q.PNG" alt="Dice3">
+                <input class="checkbox" type="checkbox" value="3">
+            </div>
+            <div class="dice-container">
+                <img class="dice" id="dice4" src="images/q.PNG" alt="Dice4">
+                <input class="checkbox" type="checkbox" value="4">
+            </div>
+            <div class="dice-container">
+                <img class="dice" id="dice5" src="images/q.PNG" alt="Dice5">
+                <input class="checkbox" type="checkbox" value="5">
+            </div>
+        </div>
+        <div id="under-dice-box">
+            <div id="diceRollsLeft">
+                Antal kast kvar:
+                <span id=throwsLeft>3</span>
+            </div>
+            <span id="explaination">
+                Kryssa för tärnignarna du vill behålla.
+            </span>
+            <div id="rollButtonSection">
+                <button id="rollButton">Slå tärningar</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="chat-section">
+        <table class="messageBox">
+            <tr class="messages">
+                <td class="boxDescription">Chatt</td>
+                <td class="messageField"><input type="text" id="inputText">
+                    <button type="button" id="btnSend">Skicka</button>
+                    <ul id="ul_list"></ul>
+                </td>
+            </tr>
+        </table>
+    </section> -->
+
+    <script src="js/main.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/one_dice.js"></script>
+</body>
+
+</html>
